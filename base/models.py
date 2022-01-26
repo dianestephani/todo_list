@@ -7,6 +7,9 @@ from django.contrib.auth.models import User
 # class is the table, and the attributes are the model columns. 
 
 # This class is the model of what each task will look like.
+# Any time this file is changed, we need to re-run our migrations to update the database.
+
+
 class Task(models.Model): 
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=200)
